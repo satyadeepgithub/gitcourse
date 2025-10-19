@@ -1,0 +1,32 @@
+git init :- to create a local repository in the current folder
+git init -b main:- creates a local repository in the current folder and name it as main
+git add <filename.extension>to move the code from working directory to staging area(starts tracking)
+git commit -m "message":- commit with message
+git commit -a -m "message":- moves th code from working directory to local repository directly without moving to staging area ( to skip add command for the tracked files)
+git status:- show the files which were changed
+git log: shows the commit messages
+git log --pretty=oneline :shows the log msgs in oneline
+git diff:- shows the differences in the working directory
+git diff --staged:to show the changes in the file in staging area
+git restore --staged <filename.extension> removes the file from staging area
+git rm --cached <filename.extension>removes the file from local repository which is already committed
+git clone <repository-url> copies the code from remote repository to local repository with the commit history and the source repository is referred as origin
+git branch -M main:-Renames current branch to main
+ git remote add origin <SSH/Https> adds remote repository as origin
+ git push -u origin main:-push the local commits to remote repository(-u--> upstream)
+ git remote -v :- show the remote repositories
+ git remote remove <remote repository name>:- removes the connection from the remote repository
+ git tag:shows the tags
+ git tag -a <(version name/tag)v1.0> -m "msg":- adding tag
+ git show <tag> shows the info of the tag and the user who tagged.
+ git push origin(remote repo) <tag>:- pushes the tag to the remote repo
+ git branch: shows the branches names and the current one is highlighted
+ git branch -a:- shows all the local branches along with remote
+ git checkout -b <new branch name>: creates a new branch if we use -b
+ git switch -c <new branch name>: creates a new branch if we use -c
+ git checkout/switch <branch name>switches to a new branch
+ git switch - <--shortcut to naviagte to the previous branch
+ git branch -d <branch name> to delete the branch instead of -d we can use --delete
+ git push origin <new branch> to create new branch in remote
+ git pull <remote repo> <branch name> merges the code from the branch name of remote repo into the current branch
+ git merge <branch2> merges the updates code from branch2 to current branch
